@@ -1,0 +1,15 @@
+{
+	"name": "classidious",
+	"version": "0.0.1",
+	"description": "Sort of DI",
+	"main": "container.js",
+	"scripts": {
+		"test": "classity"
+	},
+	"author": "",
+	"license": "ISC",
+	"type": "module",
+	"devDependencies": {
+		"classity": "^0.0.2"
+	}
+}
