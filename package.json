@@ -1,14 +1,27 @@
 {
 	"name": "classidious",
-	"version": "0.0.2",
-	"description": "Sort of DI",
+	"version": "0.0.3",
+	"description": "Minimal Container-based Dependency Injection",
+	"type": "module",
 	"main": "container.js",
 	"scripts": {
 		"test": "classity"
 	},
-	"author": "",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/FrankDeGroot/classidious.git"
+	},
+	"keywords": [
+		"di",
+		"ioc",
+		"class"
+	],
+	"author": "https://github.com/FrankDeGroot",
 	"license": "ISC",
-	"type": "module",
+	"bugs": {
+		"url": "https://github.com/FrankDeGroot/classidous/issues"
+	},
+	"homepage": "https://github.com/FrankDeGroot/classidous#readme",
 	"devDependencies": {
 		"classity": "^0.0.2"
 	}
