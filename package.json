@@ -1,6 +1,6 @@
 {
 	"name": "classidious",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "Sort of DI",
 	"main": "container.js",
 	"scripts": {

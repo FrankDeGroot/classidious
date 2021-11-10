@@ -5,11 +5,12 @@ export class Container {
 		this.depsName = depsName
 		this.#instances = { ...instances }
 	}
-	create(Class) {
+	get(Class) {
 		const deps = Class[this.depsName]
-		return this.#instances[Class] = deps
-			? new Class(...deps.map(dep =>
-				this.#instances[dep] || (this.#instances[dep] = this.create(dep))))
-			: new Class()
+		return this.#instances[Class] || (
+			this.#instances[Class] = deps
+				? new Class(...deps.map(dep => this.get(dep)))
+				: new Class()
+		)
 	}
 }

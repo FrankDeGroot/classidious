@@ -12,7 +12,7 @@ This example is an `index.js` that creates a `Parent` from `parent.js` that in t
 import { Container } from 'classidious'
 import { Parent } from './parent.js'
 
-const parent = new Container('deps').create(Parent)
+const parent = new Container('deps').get(Parent)
 ```
 
 ## `parent.js`
@@ -48,5 +48,5 @@ import { Child } from './child.js'
 
 # Use your favorite mocking library.
 const mockedChild = ... 
-const testedParent = new Container('deps', { [Child]: mockedChild }).create(Parent)
+const testedParent = new Container('deps', { [Child]: mockedChild }).get(Parent)
 ```

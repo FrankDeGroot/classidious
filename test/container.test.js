@@ -6,7 +6,13 @@ import { B } from './b.js'
 export class ContainerTest {
 	#container = new Container('needs')
 	shouldCreate() {
-		assert.equal(this.#container.create(A).a(), 'abcd')
+		assert.equal(this.#container.get(A).a(), 'abcd')
+	}
+	shouldCreateOnce() {
+		assert.equal(this.#container.get(A), this.#container.get(A))
+	}
+	shouldCreateDepsOnce() {
+		assert.equal(this.#container.get(B), this.#container.get(B))
 	}
 	shouldUsePredefinedInstance() {
 		this.#container = new Container('needs', {
@@ -16,6 +22,6 @@ export class ContainerTest {
 				}
 			}
 		})
-		assert.equal(this.#container.create(A).a(), 'aB')
+		assert.equal(this.#container.get(A).a(), 'aB')
 	}
 }
