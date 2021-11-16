@@ -1,5 +1,5 @@
 import assert from 'assert/strict'
-import { Container } from '../container.js'
+import { Container } from '../../container.js'
 import { A } from './a.js'
 import { B } from './b.js'
 
